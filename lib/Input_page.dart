@@ -24,7 +24,7 @@ class _InputPageState extends State<InputPage> {
                         selectGender = Gender.male;
                       });
                     },*/
-                  child: contanier(
+                  child: Repeate_contanier(
                     onpressed: () {
                       setState(
                             () {
@@ -51,7 +51,7 @@ class _InputPageState extends State<InputPage> {
                       });
                     },*/
 
-                  child: contanier(
+                  child: Repeate_contanier(
                     onpressed: () {
                       setState(
                             () {
@@ -76,7 +76,7 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: contanier(
+                  child: Repeate_contanier(
                     colors: Color(0xFF1D1E33),
                     cardWidge: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +118,7 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: contanier(
+                  child: Repeate_contanier(
                     cardWidge: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -155,7 +155,7 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
                 Expanded(
-                  child: contanier(
+                  child: Repeate_contanier(
                       cardWidge: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
