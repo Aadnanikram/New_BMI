@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Repeate_contanier.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'RepeateTextIcon.dart';
-import 'constent_variable.dart';
-import 'RoundIcon.dart';
-import 'Resultfind.dart';
-import 'calculation.dart';
+
 
 enum Gender {
   male,
@@ -44,7 +40,7 @@ class _InputPageState extends State<InputPage> {
                   child: Repeate_contanier(
                     onpressed: () {
                       setState(
-                            () {
+                        () {
                           selectGender = Gender.male;
                         },
                       );
@@ -71,7 +67,7 @@ class _InputPageState extends State<InputPage> {
                   child: Repeate_contanier(
                     onpressed: () {
                       setState(
-                            () {
+                        () {
                           selectGender = Gender.female;
                         },
                       );
@@ -116,7 +112,7 @@ class _InputPageState extends State<InputPage> {
                           value: slider_height.toDouble(),
                           min: 100.0,
                           max: 220.0,
-                          activeColor: Colors.black,
+                          activeColor: Colors.cyan,
                           inactiveColor: Colors.white,
                           onChanged: (double newvalue) {
                             setState(() {
@@ -210,7 +206,7 @@ class _InputPageState extends State<InputPage> {
           GestureDetector(
             onTap: () {
               Calculation cal =
-              Calculation(heigh: slider_height, weight: slider_weight);
+                  Calculation(heigh: slider_height, weight: slider_weight);
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -226,8 +222,8 @@ class _InputPageState extends State<InputPage> {
               child: Center(
                 child: Text('Calculate', style: ConstentTextLabe3),
               ),
-              color: Colors.deepOrange,
-              height: 60,
+              color: Colors.black,
+              height: 55,
               width: double.infinity,
               margin: EdgeInsets.only(top: 10),
             ),

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'Input_page.dart';
 
-void main() => runApp(BMICalculator());
+void main() {
+  runApp(BmiCalculatur());
+}
 
-class BMICalculator extends StatelessWidget {
+class BmiCalculatur extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: InputPage(),
       theme: ThemeData.dark().copyWith(
-        primaryColor: Colors.cyan,
-        scaffoldBackgroundColor: Colors.cyan,
+        primaryColor: Colors.pink,
+        scaffoldBackgroundColor: Colors.pink,
       ),
     );
   }
 }
-
