@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'Repeate_contanier.dart';
+import 'RepeateTextIcon.dart';
+import 'constent_variable.dart';
+import 'Resultfind.dart';
+import 'calculation.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum Gender {
   male,
@@ -16,13 +19,13 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectGender;
   int slider_height = 100;
-  int slider_weight = 20;
-  int sliderage = 10;
+  int slider_weight = 40;
+  int sliderage = 20;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI'),
+        title: Text('BMI Calculator'),
       ),
       body: Column(
         children: [
@@ -50,20 +53,13 @@ class _InputPageState extends State<InputPage> {
                         : deactivationcolor,
                     cardWidge: RepeateTextIcon(
                       iconData: FontAwesomeIcons.male,
+                      //iconData: FontAwesomeIcons.male,
                       Label: 'MALE',
                     ),
                   ),
                   //),
                 ),
                 Expanded(
-                  /*child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        //update_color(Gender.female);
-                        selectGender = Gender.female;
-                      });
-                    },*/
-
                   child: Repeate_contanier(
                     onpressed: () {
                       setState(
@@ -103,7 +99,7 @@ class _InputPageState extends State<InputPage> {
                               style: ConstentTextLabe2,
                             ),
                             Text(
-                              'cm',
+                              'm',
                               style: ConstentTextLabel,
                             ),
                           ],
@@ -111,8 +107,8 @@ class _InputPageState extends State<InputPage> {
                         Slider(
                           value: slider_height.toDouble(),
                           min: 100.0,
-                          max: 220.0,
-                          activeColor: Colors.cyan,
+                          max: 230.0,
+                          activeColor: Colors.greenAccent,
                           inactiveColor: Colors.white,
                           onChanged: (double newvalue) {
                             setState(() {
@@ -139,7 +135,19 @@ class _InputPageState extends State<InputPage> {
                           'WEGHT',
                           style: ConstentTextLabel,
                         ),
-                        Text('$slider_weight', style: ConstentTextLabe2),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '$slider_weight',
+                              style: ConstentTextLabe2,
+                            ),
+                            Text(
+                              'kg',
+                              style: ConstentTextLabel,
+                            ),
+                          ],
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -164,7 +172,7 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
-                    colors: Color(0xFF1D1E33),
+                    colors: Colors.cyan,
                   ),
                 ),
                 Expanded(
@@ -198,7 +206,7 @@ class _InputPageState extends State<InputPage> {
                           )
                         ],
                       ),
-                      colors: Color(0xFF1D1E33)),
+                      colors: Colors.cyan),
                 ),
               ],
             ),
@@ -222,14 +230,34 @@ class _InputPageState extends State<InputPage> {
               child: Center(
                 child: Text('Calculate', style: ConstentTextLabe3),
               ),
-              color: Colors.black,
-              height: 55,
+              color: Colors.blueGrey,
+              height: 60,
               width: double.infinity,
               margin: EdgeInsets.only(top: 10),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class RoundIcon extends StatelessWidget {
+  RoundIcon({@required this.icondata, this.onPress});
+  final IconData icondata;
+  final Function onPress;
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      child: Icon(
+        icondata,
+        color: Colors.black,
+      ),
+      onPressed: onPress,
+      elevation: 6,
+      constraints: BoxConstraints.tightFor(height: 50.0, width: 50.0),
+      shape: CircleBorder(),
+      fillColor: Colors.red,
     );
   }
 }
