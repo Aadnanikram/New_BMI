@@ -29,7 +29,7 @@ class Calculation {
     } else if (_result > 18 && _result < 25) {
       return 'You hve a Normal Body Weight. Good Job';
     } else {
-      return 'You have a lower than Normal body weight. You need to eat bit more';
+      return 'You have a lower than Normal body weight. You need to eat bit more and then you are healthy';
     }
   }
 }
