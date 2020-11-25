@@ -1,15 +1,32 @@
 import 'package:flutter/material.dart';
+import 'Repeate_contanier.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'RepeateTextIcon.dart';
+import 'constent_variable.dart';
+import 'RoundIcon.dart';
+import 'Resultfind.dart';
+import 'calculation.dart';
+
+enum Gender {
+  male,
+  female,
+}
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
 
 class _InputPageState extends State<InputPage> {
+  Gender selectGender;
+  int slider_height = 100;
+  int slider_weight = 20;
+  int sliderage = 10;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('BMI'),
       ),
       body: Column(
         children: [
@@ -99,7 +116,7 @@ class _InputPageState extends State<InputPage> {
                           value: slider_height.toDouble(),
                           min: 100.0,
                           max: 220.0,
-                          activeColor: Colors.redAccent,
+                          activeColor: Colors.black,
                           inactiveColor: Colors.white,
                           onChanged: (double newvalue) {
                             setState(() {
