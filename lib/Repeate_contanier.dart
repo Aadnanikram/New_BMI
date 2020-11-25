@@ -14,7 +14,7 @@ class Repeate_contanier extends StatelessWidget {
         margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
             color: colors,
-            borderRadius: BorderRadiusDirectional.circular(15.0)),
+            borderRadius: BorderRadiusDirectional.circular(20.0)),
       ),
     );
   }

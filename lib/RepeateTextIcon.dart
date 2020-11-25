@@ -14,7 +14,7 @@ class RepeateTextIcon extends StatelessWidget {
         Icon(
           iconData,
           //FontAwesomeIcons.male,
-          size: 50.0,
+          size: 40.0,
         ),
         SizedBox(height: 10),
         Text(
